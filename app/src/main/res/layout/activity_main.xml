@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg" />
+
+    <TextView
+        android:id="@+id/juvhp"
+        android:layout_width="35dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="56dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="1000"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/juvmp"
+        android:layout_width="35dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="20"
+        android:textColor="#00BCD4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/juvhp"
+        app:layout_constraintStart_toEndOf="@+id/juvhp"
+        app:layout_constraintTop_toTopOf="@+id/juvhp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/grfmp"
+        android:layout_width="35dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="20"
+        android:textColor="#00BCD4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/grfhp"
+        app:layout_constraintEnd_toStartOf="@+id/grfhp"
+        app:layout_constraintTop_toTopOf="@+id/grfhp"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/grfhp"
+        android:layout_width="35dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="72dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="1000"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/announce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="It's   Juvia's   Turn"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.287" />
+
+    <TextView
+        android:id="@+id/announce2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="Juvia    Lockser"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/announce3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="Gray    Fullbuster"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="730dp"
+        android:layout_height="393dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mid" />
+
+    <ImageView
+        android:id="@+id/btnskill"
+        android:layout_width="142dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="614dp"
+        android:layout_marginBottom="49dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/attack_button_pixel" />
+
+    <ImageView
+        android:id="@+id/btnnext"
+        android:layout_width="323dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnskill"
+        app:srcCompat="@drawable/next_turn_button_pixel" />
+
+    <TextView
+        android:id="@+id/damage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/arcadeclassic"
+        android:text="Juvia dealt XXX damage"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/announce"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/announce"
+        app:layout_constraintTop_toBottomOf="@+id/announce" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="54dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gray_banner" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="54dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/juvia_banner" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/announce"
+        app:layout_constraintEnd_toEndOf="@+id/announce"
+        app:layout_constraintStart_toStartOf="@+id/announce"
+        app:srcCompat="@drawable/versus" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="304dp"
+        android:layout_height="211dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/juvia_lockser" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="304dp"
+        android:layout_height="211dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/gray_fullbuster" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
