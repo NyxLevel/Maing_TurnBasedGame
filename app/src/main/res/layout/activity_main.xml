@@ -112,17 +112,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="730dp"
-        android:layout_height="393dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mid" />
-
-    <ImageView
         android:id="@+id/btnskill"
         android:layout_width="142dp"
         android:layout_height="60dp"
@@ -131,6 +120,18 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/attack_button_pixel" />
+
+    <ImageView
+        android:id="@+id/btnrestart"
+        android:layout_width="323dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="1dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/btnnext"
+        app:layout_constraintEnd_toEndOf="@+id/btnnext"
+        app:layout_constraintStart_toStartOf="@+id/btnnext"
+        app:layout_constraintTop_toTopOf="@+id/btnnext"
+        app:srcCompat="@drawable/rest" />
 
     <ImageView
         android:id="@+id/btnnext"

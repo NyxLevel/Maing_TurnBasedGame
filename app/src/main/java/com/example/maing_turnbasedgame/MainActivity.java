@@ -1,13 +1,10 @@
 package com.example.maing_turnbasedgame;
 
-import static android.content.ContentValues.TAG;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -17,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     GRF grf;
     Controller system;
     TextView juvhealth, grfhealth,juvmana,grfmana, announce, damage;
-    ImageView btnskill, btnnext;
+    ImageView btnskill, btnnext,btnrestart;
     MediaPlayer bgm, sfx;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         damage = findViewById(R.id.damage);
         btnskill = findViewById(R.id.btnskill);
         btnnext = findViewById(R.id.btnnext);
+        btnrestart = findViewById(R.id.btnrestart);
         btnskill.setOnClickListener(this);
         btnnext.setOnClickListener(this);
+        btnrestart.setOnClickListener(this);
         displayChanges();
         enableFullscreen();
         damage.setVisibility(View.INVISIBLE);
@@ -59,12 +58,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(view.getId()){
             case R.id.btnskill:
                 sfx.start();
-                system.skill(announce,damage,btnskill,btnnext,juv,grf);
+                system.skill(announce,damage,btnskill,btnnext,btnrestart,juv,grf);
                 break;
             case R.id.btnnext:
-                system.Turn(announce,damage,btnskill,btnnext,juv,grf);
+                system.Turn(announce,damage,btnskill,btnnext,btnrestart,juv,grf);
                 break;
-            //case R.id.btnrestart:
+            case R.id.btnrestart:
+                system.reset(announce,damage,btnskill,btnnext,btnrestart,juv,grf);
+                break;
         }
             displayChanges();
     }
